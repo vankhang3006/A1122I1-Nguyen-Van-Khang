@@ -28,8 +28,6 @@ public class Bai4 {
             for (int j = 0; j < cot; j++) {
                 if(max < numbers[i][j]){
                     max = numbers[i][j];
-                }else{
-                    continue;
                 }
             }
         }
