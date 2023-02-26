@@ -1,31 +1,38 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Bai4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int i,n;
-        do{
-            System.out.print("Nhập vào số phần tử của mảng: ");
-            n = Integer.parseInt(scanner.nextLine());
-            if(n<=0){
-                System.out.println("n > 0, xin kiểm tra lại!!!");
-            }
-        }while(n<=0);
-        int[] arr = new int[n];
-        for(i =0; i<n;i++){
-            System.out.print("Nhập vào phần tử arr[" +i+"] của mảng : ");
-            arr[i] = Integer.parseInt(scanner.nextLine());
-        }
-        System.out.println("Mảng vừa nhập vào: "+ Arrays.toString(arr));
-        int min = arr[0];
-        for(i =1; i<n;i++){
-            if(min > arr[i]){
-                min = arr[i];
-            }else{
-                continue;
+        System.out.print("Nhập vào số hàng của ma trận: ");
+        int hang = Integer.parseInt(scanner.nextLine());
+        System.out.print("Nhập vào số cột của ma trận: ");
+        int cot = Integer.parseInt(scanner.nextLine());
+        int [][] numbers = new int[hang][cot];
+        for (int i = 0; i < hang; i++) {
+            for (int j = 0; j < cot; j++) {
+                System.out.print("Nhập phần tử thứ [" + i + ", " + j + "]: ");
+                numbers[i][j] = scanner.nextInt();
             }
         }
-        System.out.print("Phần tử nhỏ nhất trong mảng vừa nhập vào là: "+min);
+
+        System.out.println("Ma trận vừa nhập: ");
+        for (int i = 0; i < hang; i++) {
+            for (int j = 0; j < cot; j++) {
+                System.out.print(numbers[i][j] + "\t");
+            }
+            // sau khi viết xong 1 dòng thi xuống hàng
+            System.out.println("\n");
+        }
+        int max = numbers[0][0];
+        for (int i = 0; i < hang; i++) {
+            for (int j = 0; j < cot; j++) {
+                if(max < numbers[i][j]){
+                    max = numbers[i][j];
+                }else{
+                    continue;
+                }
+            }
+        }
+        System.out.println("Gía trị lớn nhất của ma trận vừa nhập vào là: "+max);
     }
 }

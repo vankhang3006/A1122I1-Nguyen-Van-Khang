@@ -1,38 +1,47 @@
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Bai3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhập vào số hàng của ma trận: ");
-        int hang = Integer.parseInt(scanner.nextLine());
-        System.out.print("Nhập vào số cột của ma trận: ");
-        int cot = Integer.parseInt(scanner.nextLine());
-        int [][] numbers = new int[hang][cot];
-        for (int i = 0; i < hang; i++) {
-            for (int j = 0; j < cot; j++) {
-                System.out.print("Nhập phần tử thứ [" + i + ", " + j + "]: ");
-                numbers[i][j] = scanner.nextInt();
+        int i,j,n1,n2,n;
+        int k=0;
+        do{
+            System.out.print("Nhập vào số phần tử của mảng 1: ");
+            n1 = Integer.parseInt(scanner.nextLine());
+            if(n1<=0){
+                System.out.println("n1 > 0, xin kiểm tra lại!!!");
             }
+        }while(n1<=0);
+        int[] arr1 = new int[n1];
+        for(i =0; i<n1;i++){
+            System.out.print("Nhập vào phần tử arr[" +i+"] của mảng 1: ");
+            arr1[i] = Integer.parseInt(scanner.nextLine());
         }
-
-        System.out.println("Ma trận vừa nhập: ");
-        for (int i = 0; i < hang; i++) {
-            for (int j = 0; j < cot; j++) {
-                System.out.print(numbers[i][j] + "\t");
+        do{
+            System.out.print("Nhập vào số phần tử của mảng 2: ");
+            n2 = Integer.parseInt(scanner.nextLine());
+            if(n2<=0){
+                System.out.println("n2 > 0, xin kiểm tra lại!!!");
             }
-            // sau khi viết xong 1 dòng thi xuống hàng
-            System.out.println("\n");
+        }while(n2<=0);
+        int[] arr2 = new int[n2];
+        for(j = 0; j<n2;j++){
+            System.out.print("Nhập vào phần tử arr[" +j+"] của mảng 2: ");
+            arr2[j] = Integer.parseInt(scanner.nextLine());
         }
-        int max = numbers[0][0];
-        for (int i = 0; i < hang; i++) {
-            for (int j = 0; j < cot; j++) {
-                if(max < numbers[i][j]){
-                    max = numbers[i][j];
-                }else{
-                    continue;
-                }
-            }
+        System.out.println("Mảng 1: "+ Arrays.toString(arr1));
+        System.out.println("Mảng 2: "+ Arrays.toString(arr2));
+        n = n1+n2;
+        int[] arrMerg = new int[n];
+        for (i = 0; i<n1; i++){
+            arrMerg[i] = arr1[i];
         }
-        System.out.println("Gía trị lớn nhất của ma trận vừa nhập vào là: "+max);
+        for(i=n1; i<n; i++){
+            arrMerg[i] = arr2[k];
+            k++;
+        }
+        System.out.println("Mảng sau khi gộp: "+ Arrays.toString(arrMerg));
     }
 }
