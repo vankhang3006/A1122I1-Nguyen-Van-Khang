@@ -7,11 +7,11 @@ public class Bai4 {
         int hang = Integer.parseInt(scanner.nextLine());
         System.out.print("Nhập vào số cột của ma trận: ");
         int cot = Integer.parseInt(scanner.nextLine());
-        int [][] numbers = new int[hang][cot];
+        int[][] numbers = new int[hang][cot];
         for (int i = 0; i < hang; i++) {
             for (int j = 0; j < cot; j++) {
                 System.out.print("Nhập phần tử thứ [" + i + ", " + j + "]: ");
-                numbers[i][j] = scanner.nextInt();
+                numbers[i][j] = Integer.parseInt(scanner.nextLine());
             }
         }
 
@@ -26,11 +26,11 @@ public class Bai4 {
         int max = numbers[0][0];
         for (int i = 0; i < hang; i++) {
             for (int j = 0; j < cot; j++) {
-                if(max < numbers[i][j]){
+                if (max < numbers[i][j]) {
                     max = numbers[i][j];
                 }
             }
         }
-        System.out.println("Gía trị lớn nhất của ma trận vừa nhập vào là: "+max);
+        System.out.println("Gía trị lớn nhất của ma trận vừa nhập vào là: " + max);
     }
 }

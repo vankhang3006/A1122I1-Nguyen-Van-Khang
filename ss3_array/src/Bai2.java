@@ -8,12 +8,12 @@ public class Bai2 {
         System.out.println(Arrays.toString(numbers));
         System.out.print("Nhập vào vị trí của mảng cần thêm vào: ");
         Scanner scanner = new Scanner(System.in);
-        index = scanner.nextInt();
+        index = Integer.parseInt(scanner.nextLine());
         if (index <= 1 || index >= numbers.length - 1) {
             System.out.print("Không chèn được vào phần tử vào mảng: ");
         }
         System.out.print("Nhập vào giá trị của mảng cần thêm vào: ");
-        number = scanner.nextInt();
+        number = Integer.parseInt(scanner.nextLine());
 
         for (int i = numbers.length - 1; i > index; i--) {
             numbers[i] = numbers[i - 1];

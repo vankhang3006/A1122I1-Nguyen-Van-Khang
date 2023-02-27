@@ -8,8 +8,8 @@ public class Bai1 {
         int i, j;
         System.out.println(Arrays.toString(numbers));
         System.out.print("Nhập vào giá trị cần kiểm tra trong mảng: ");
-        Scanner sc = new Scanner(System.in);
-        int item = sc.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        int item = Integer.parseInt(scanner.nextLine());
         for (i = 0; i < numbers.length - 1; i++) {
             if (numbers[i] == item) {
                 System.out.println(item + " Đang tồn tại ở vị trí " + (i + 1));
