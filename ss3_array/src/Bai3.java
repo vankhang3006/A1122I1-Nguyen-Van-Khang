@@ -3,34 +3,27 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Bai3 {
+    public static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+
         int i, n1, n2, n;
         int k = 0;
-        do {
-            System.out.print("Nhập vào số phần tử của mảng 1: ");
-            n1 = Integer.parseInt(scanner.nextLine());
-            if (n1 <= 0) {
-                System.out.println("n1 > 0, xin kiểm tra lại!!!");
-            }
-        } while (n1 <= 0);
+        n1 = inputN(scanner, 1);
         int[] arr1 = new int[n1];
         for (i = 0; i < n1; i++) {
-            System.out.print("Nhập vào phần tử arr[" + i + "] của mảng 1: ");
+            System.out.print("Nhập vào phần tử thứ " + i + 1 + " của mảng 1: ");
             arr1[i] = Integer.parseInt(scanner.nextLine());
         }
-        do {
-            System.out.print("Nhập vào số phần tử của mảng 2: ");
-            n2 = Integer.parseInt(scanner.nextLine());
-            if (n2 <= 0) {
-                System.out.println("n2 > 0, xin kiểm tra lại!!!");
-            }
-        } while (n2 <= 0);
+        n2 = inputN(scanner, 2);
+
         int[] arr2 = new int[n2];
+
         for (i = 0; i < n2; i++) {
-            System.out.print("Nhập vào phần tử arr[" + i + "] của mảng 2: ");
+            System.out.print("Nhập vào phần tử thứ " + i + 1 + " của mảng 2: ");
             arr2[i] = Integer.parseInt(scanner.nextLine());
         }
+
         System.out.println("Mảng 1: " + Arrays.toString(arr1));
         System.out.println("Mảng 2: " + Arrays.toString(arr2));
         n = n1 + n2;
@@ -43,5 +36,17 @@ public class Bai3 {
             k++;
         }
         System.out.println("Mảng sau khi gộp: " + Arrays.toString(arrMerg));
+    }
+
+    private static int inputN(Scanner scanner, int x) {
+        int n;
+        do {
+            System.out.print("Nhập vào số phần tử của mảng " + x + " : ");
+            n = Integer.parseInt(scanner.nextLine());
+            if (n <= 0) {
+                System.out.println("n > 0, xin kiểm tra lại!!!");
+            }
+        } while (n <= 0);
+        return n;
     }
 }
