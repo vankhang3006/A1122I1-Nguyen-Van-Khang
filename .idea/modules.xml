@@ -11,6 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/ss2_loop/ss2_loop.iml" filepath="$PROJECT_DIR$/ss2_loop/ss2_loop.iml" />
       <module fileurl="file://$PROJECT_DIR$/ss3_array/ss3_array.iml" filepath="$PROJECT_DIR$/ss3_array/ss3_array.iml" />
       <module fileurl="file://$PROJECT_DIR$/ss4_OOP/ss4_oop.iml" filepath="$PROJECT_DIR$/ss4_OOP/ss4_oop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss5_AccessModifier/Bai1/ss5_Access Modifier.iml" filepath="$PROJECT_DIR$/ss5_AccessModifier/Bai1/ss5_Access Modifier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss5_AccessModifier/ss5_AccessModifier.iml" filepath="$PROJECT_DIR$/ss5_AccessModifier/ss5_AccessModifier.iml" />
     </modules>
   </component>
 </project>
