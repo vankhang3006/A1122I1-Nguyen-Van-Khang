@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/ss5_AccessModifier/Bai1/ss5_Access Modifier.iml" filepath="$PROJECT_DIR$/ss5_AccessModifier/Bai1/ss5_Access Modifier.iml" />
       <module fileurl="file://$PROJECT_DIR$/ss5_AccessModifier/ss5_AccessModifier.iml" filepath="$PROJECT_DIR$/ss5_AccessModifier/ss5_AccessModifier.iml" />
       <module fileurl="file://$PROJECT_DIR$/ss6_Inheritance/ss6_Inheritance.iml" filepath="$PROJECT_DIR$/ss6_Inheritance/ss6_Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss7_Abstract-Interface/ss7_Abstract-Interface.iml" filepath="$PROJECT_DIR$/ss7_Abstract-Interface/ss7_Abstract-Interface.iml" />
     </modules>
   </component>
 </project>
