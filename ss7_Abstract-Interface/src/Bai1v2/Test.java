@@ -19,7 +19,7 @@ public class Test {
             System.out.println("Nhập vào phần trăm kích thước cần tăng: ");
             double percent = Double.parseDouble(scanner.nextLine());
             System.out.println(shape.toString() + " - " + shape.reSize(percent));
-            if (shape instanceof Square) {
+            if (shape instanceof Colorable) {
                 Colorable colorable = (Square) shape;
                 System.out.println(colorable.howToColor());
             }
