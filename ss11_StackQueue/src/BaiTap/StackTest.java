@@ -84,6 +84,7 @@ public class StackTest {
                 break;
             case 5:
                 System.out.println("Bạn đã chọn thoát! ");
+                System.exit(0);
                 break;
         }
 

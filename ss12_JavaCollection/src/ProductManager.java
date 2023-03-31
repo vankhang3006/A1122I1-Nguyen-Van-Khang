@@ -8,11 +8,11 @@ public class ProductManager {
     Scanner sc = new Scanner(System.in);
 
     public void addProduct() {
-        System.out.println("Nhập mã sản phẩm: ");
+        System.out.println("Input product's id: ");
         int id = Integer.parseInt(sc.nextLine());
-        System.out.println("Nhập tên sản phẩm: ");
+        System.out.println("Input product's name: ");
         String name = sc.nextLine();
-        System.out.println("Nhập giá sản phẩm: ");
+        System.out.println("Input product's price: ");
         double price = sc.nextDouble();
         sc.nextLine();
         Product product = new Product(id, name, price);
@@ -22,28 +22,28 @@ public class ProductManager {
     public void displayProduct(){
         int count = 1;
         for(Product product : productList){
-            System.out.println("Thông tin sản phẩm thứ "+ count++ + ":");
+            System.out.println("Information of product "+ count++ + ":");
             System.out.println(product.toString());
         }
     }
 
     public void editProduct(){
-        System.out.println("Nhập id sản phẩm cần sửa: ");
+        System.out.println("Input product's id you want to change: ");
         int editId = Integer.parseInt(sc.nextLine());
         for(Product product : productList){
             if(product.getId() == editId){
-                System.out.println("Nhập tên sản phẩm mới: ");
+                System.out.println("Input new product's name: ");
                 product.setName(sc.nextLine());
-                System.out.println("Nhập giá sản phẩm mới: ");
+                System.out.println("Input new product's price: ");
                 product.setPrice(sc.nextDouble());
                 return;
             }
         }
-        System.out.println("Không tìn thấy sản phẩm.");
+        System.out.println("Product not found!");
     }
 
     public void deleteProduct(){
-        System.out.println("Nhập id sản phẩm cần xóa: ");
+        System.out.println("Input product's id you want to delete: ");
         int delId = Integer.parseInt(sc.nextLine());
         for(Product product : productList){
             if(product.getId() == delId){
@@ -51,11 +51,11 @@ public class ProductManager {
                 return;
             }
         }
-        System.out.println("Không tìn thấy sản phẩm.");
+        System.out.println("Product not found!");
     }
 
     public void searchProduct(){
-        System.out.println("Nhập tên sản phẩm cần tìm: ");
+        System.out.println("Input product's name you want to search: ");
         String productName = sc.nextLine();
         for(Product product : productList){
             if(product.getName().equals(productName)){
@@ -63,7 +63,7 @@ public class ProductManager {
                 return;
             }
         }
-        System.out.println("Không tìn thấy sản phẩm.");
+        System.out.println("Product not found!");
     }
 
     public void sortProductAscending(){
